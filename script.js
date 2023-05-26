@@ -23,3 +23,28 @@ function digitalClock() {
 }
 
 setInterval(digitalClock, 1000)
+
+let date = document.getElementById("date")
+
+function showDate() {
+  let now = new Date()
+
+  let dayMonth = now.getDate()
+  let month = now.getMonth() + 1
+  let year = now.getFullYear()
+
+    if(dayMonth < 10) {
+    dayMonth = "0" + dayMonth
+  }
+
+  if(month < 10) {
+    month = "0" + month
+  }
+
+  let currentDate = year + " / " + month + " / " + dayMonth
+
+  date.textContent = currentDate
+}
+
+setInterval(showDate, 1000)
+showDate()

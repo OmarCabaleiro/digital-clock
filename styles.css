@@ -75,3 +75,9 @@ body {
 @keyframes blinker {
   25%{opacity: 0;}
 }
+
+#date {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 10px;
+}
